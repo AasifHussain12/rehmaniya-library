@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehmaniya Library Pulwama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef2f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Outer Card */
+        .main-card {
+            position: relative;
+            width: 100%;
+            max-width: 860px;
+            background-color: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        /* Gold Corner L-Accents */
+        .corner-left, .corner-right {
+            position: absolute;
+            bottom: 15px;
+            width: 35px;
+            height: 35px;
+            border-bottom: 4px solid #d97706;
+        }
+        .corner-left {
+            left: 15px;
+            border-left: 4px solid #d97706;
+        }
+        .corner-right {
+            right: 15px;
+            border-right: 4px solid #d97706;
+        }
+
+        /* Top Sliding Banner (Right to Left) */
+        .banner-wrapper {
+            background-color: #0f172a;
+            border-bottom: 3px solid #f59e0b;
+            padding: 14px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .banner-text {
+            display: inline-block;
+            color: #fbbf24;
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 100%;
+            animation: slideRightToLeft 16s linear infinite;
+        }
+
+        @keyframes slideRightToLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Framed Library Photo */
+        .photo-frame {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 6px;
+            background-color: #ffffff;
+            border: 3px solid #1e3a8a;
+            border-radius: 6px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .photo-frame img {
+            display: block;
+            max-width: 420px;
+            width: 100%;
+            height: auto;
+            max-height: 260px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        /* Main Welcome Heading & Subtitle */
+        .welcome-title {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            color: #0f172a;
+            margin-top: 24px;
+            padding: 0 15px;
+        }
+
+        .subtitle-badge {
+            color: #d97706;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-top: 8px;
+            margin-bottom: 26px;
+            padding: 0 15px;
+        }
+
+        /* Styled Quote Card Container */
+        .quote-card {
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-left: 8px solid #1e3a8a;
+            border-radius: 8px;
+            padding: 24px 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .quote-card p {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #1e293b;
+            margin: 14px 0;
+            line-height: 1.5;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .welcome-title { font-size: 22px; }
+            .quote-card { margin: 0 15px; padding: 18px; }
+            .quote-card p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <!-- Top Scrolling Banner -->
+        <div class="banner-wrapper">
+            <div class="banner-text">
+                ★ Registration is open! Come and get your seat!   |   Quiet Study Environment • High-Speed Wi-Fi ★
+            </div>
+        </div>
+
+        <!-- Library Photo -->
+        <div class="photo-frame">
+            <img src="photos/library.jpg" alt="Rehmaniya Library Pulwama">
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h1 class="welcome-title">Welcome to Rehmaniya Library Pulwama</h1>
+        <div class="subtitle-badge">✦ YOUR GATEWAY TO FOCUS, DISCIPLINE & EXCELLENCE ✦</div>
+
+        <!-- Quotes Box -->
+        <div class="quote-card">
+            <p>“Focus on your goal. Don't look in any direction but ahead.”</p>
+            <p>“Education is the most powerful weapon which you can use to change the world.”</p>
+            <p>“Discipline, quiet focus, and consistency turn dreams into reality.”</p>
+        </div>
+
+        <!-- Bottom Gold Corner Brackets -->
+        <div class="corner-left"></div>
+        <div class="corner-right"></div>
+    </div>
+
+</body>
+</html>
