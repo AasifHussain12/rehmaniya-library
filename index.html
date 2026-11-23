@@ -1,179 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehmaniya Library Pulwama</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehmaniya Library Pulwama | 24×7 Self-Study Space</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --card: #263348;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --green: #22c55e;
+      --border: #334155;
+    }
 
-        body {
-            background-color: #eef2f6;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Main Outer Card */
-        .main-card {
-            position: relative;
-            width: 100%;
-            max-width: 860px;
-            background-color: #f8fafc;
-            border: 2px solid #cbd5e1;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
-            text-align: center;
-            padding-bottom: 40px;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-        /* Gold Corner L-Accents */
-        .corner-left, .corner-right {
-            position: absolute;
-            bottom: 15px;
-            width: 35px;
-            height: 35px;
-            border-bottom: 4px solid #d97706;
-        }
-        .corner-left {
-            left: 15px;
-            border-left: 4px solid #d97706;
-        }
-        .corner-right {
-            right: 15px;
-            border-right: 4px solid #d97706;
-        }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1.5rem 1.15rem 3rem;
+    }
 
-        /* Top Sliding Banner (Right to Left) */
-        .banner-wrapper {
-            background-color: #0f172a;
-            border-bottom: 3px solid #f59e0b;
-            padding: 14px 0;
-            overflow: hidden;
-            white-space: nowrap;
-        }
+    /* Header Banner */
+    .hero {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem 1.35rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-        .banner-text {
-            display: inline-block;
-            color: #fbbf24;
-            font-size: 16px;
-            font-weight: bold;
-            padding-left: 100%;
-            animation: slideRightToLeft 16s linear infinite;
-        }
+    .badge-247 {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.16);
+      color: var(--green);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.5px;
+    }
 
-        @keyframes slideRightToLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
+    .hero h1 {
+      font-size: 1.75rem;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
 
-        /* Framed Library Photo */
-        .photo-frame {
-            display: inline-block;
-            margin-top: 32px;
-            padding: 6px;
-            background-color: #ffffff;
-            border: 3px solid #1e3a8a;
-            border-radius: 6px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-        }
+    .location {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
 
-        .photo-frame img {
-            display: block;
-            max-width: 420px;
-            width: 100%;
-            height: auto;
-            max-height: 260px;
-            object-fit: cover;
-            border-radius: 2px;
-        }
+    /* Quick Action Buttons */
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+    }
 
-        /* Main Welcome Heading & Subtitle */
-        .welcome-title {
-            font-family: Georgia, serif;
-            font-size: 28px;
-            color: #0f172a;
-            margin-top: 24px;
-            padding: 0 15px;
-        }
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 0.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
 
-        .subtitle-badge {
-            color: #d97706;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            margin-top: 8px;
-            margin-bottom: 26px;
-            padding: 0 15px;
-        }
+    .action-btn:active {
+      transform: scale(0.97);
+    }
 
-        /* Styled Quote Card Container */
-        .quote-card {
-            max-width: 720px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-left: 8px solid #1e3a8a;
-            border-radius: 8px;
-            padding: 24px 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-        }
+    .btn-call {
+      background: var(--accent);
+      color: #0f172a;
+    }
 
-        .quote-card p {
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 16px;
-            color: #1e293b;
-            margin: 14px 0;
-            line-height: 1.5;
-        }
+    .btn-whatsapp {
+      background: var(--green);
+      color: #052e16;
+    }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 600px) {
-            .welcome-title { font-size: 22px; }
-            .quote-card { margin: 0 15px; padding: 18px; }
-            .quote-card p { font-size: 14px; }
-        }
-    </style>
+    .btn-map {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 1.25rem;
+      margin: 1.75rem 0 0.9rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.65rem;
+    }
+
+    /* Facilities Grid */
+    .facilities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .facility-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .facility-card strong {
+      display: block;
+      color: var(--accent);
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .facility-card span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Fee Plans */
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+    }
+
+    .plan-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem;
+      text-align: center;
+    }
+
+    .plan-card.popular {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.12), var(--surface));
+    }
+
+    .plan-title {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .plan-price {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .plan-price small {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    /* Registration Form */
+    .form-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.95rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.7rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--accent);
+      color: #0f172a;
+      border: none;
+      border-radius: 8px;
+      padding: 0.85rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.35rem;
+    }
+
+    .submit-btn:hover {
+      background: #7dd3fc;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 440px) {
+      .facilities,
+      .plans {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <!-- Top Scrolling Banner -->
-        <div class="banner-wrapper">
-            <div class="banner-text">
-                ★ Registration is open! Come and get your seat!   |   Quiet Study Environment • High-Speed Wi-Fi ★
-            </div>
-        </div>
+  <div class="container">
+    <!-- Hero Header -->
+    <div class="hero">
+      <div class="badge-247">OPEN 24 × 7</div>
+      <h1>Rehmaniya Library Pulwama</h1>
+      <p class="location">Prichoo Sumo Stand, Pulwama, Jammu & Kashmir</p>
 
-        <!-- Library Photo -->
-        <div class="photo-frame">
-            <img src="image1.png" alt="Rehmaniya Library Pulwama">
-        </div>
-
-        <!-- Title & Subtitle -->
-        <h1 class="welcome-title">Welcome to Rehmaniya Library Pulwama</h1>
-        <div class="subtitle-badge">✦ YOUR GATEWAY TO FOCUS, DISCIPLINE & EXCELLENCE ✦</div>
-
-        <!-- Quotes Box -->
-        <div class="quote-card">
-            <p>“Focus on your goal. Don't look in any direction but ahead.”</p>
-            <p>“Education is the most powerful weapon which you can use to change the world.”</p>
-            <p>“Discipline, quiet focus, and consistency turn dreams into reality.”</p>
-        </div>
-
-        <!-- Bottom Gold Corner Brackets -->
-        <div class="corner-left"></div>
-        <div class="corner-right"></div>
+      <div class="quick-actions">
+        <a href="tel:+916006476218" class="action-btn btn-call">Call Now</a>
+        <a href="https://wa.me/916006476218?text=Hello%2C%20I%20scanned%20the%20QR%20code%20and%20want%20to%20enquire%20about%20seat%20availability%20at%20Rehmaniya%20Library%20Pulwama." target="_blank" rel="noopener noreferrer" class="action-btn btn-whatsapp">WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Prichoo+Sumo+Stand+Pulwama" target="_blank" rel="noopener noreferrer" class="action-btn btn-map">Directions</a>
+      </div>
     </div>
+
+    <!-- Facilities -->
+    <h2>Library Facilities</h2>
+    <div class="facilities">
+      <div class="facility-card">
+        <strong>24×7 Open Access</strong>
+        <span>Study anytime—day or late night without interruption.</span>
+      </div>
+      <div class="facility-card">
+        <strong>24×7 High-Speed Wi-Fi</strong>
+        <span>Reliable internet for online lectures, mock tests, and research.</span>
+      </div>
+      <div class="facility-card">
+        <strong>4 Air Conditioners (24×7)</strong>
+        <span>Climate-controlled, quiet, and comfortable study hall.</span>
+      </div>
+      <div class="facility-card">
+        <strong>Prime Location</strong>
+        <span>Easily accessible right at Prichoo Sumo Stand, Pulwama.</span>
+      </div>
+    </div>
+
+    <!-- Fee Structure -->
+    <h2>Monthly Membership Plans</h2>
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-title">Day Shift</div>
+        <div class="plan-price">₹1,100 <small>/ month</small></div>
+      </div>
+      <div class="plan-card popular">
+        <div class="plan-title">Day + Night (24×7)</div>
+        <div class="plan-price">₹1,500 <small>/ month</small></div>
+      </div>
+    </div>
+
+    <!-- Student Registration Form -->
+    <h2>Student Registration Form</h2>
+    <div class="form-box">
+      <!-- Replace YOUR_ACCESS_KEY_HERE with your Web3Forms key linked to asiff4268@gmail.com -->
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="4cc6ed38-2add-4302-96b5-7b6fd2553702" />
+        <input type="hidden" name="subject" value="New Student Registration - Rehmaniya Library Pulwama" />
+
+        <div class="form-group">
+          <label for="student_name">Full Name *</label>
+          <input type="text" id="student_name" name="student_name" placeholder="Enter student's full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" required />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Village / Town Address *</label>
+          <input type="text" id="address" name="address" placeholder="Enter your locality" required />
+        </div>
+
+        <div class="form-group">
+          <label for="exam_prep">Preparing For (Optional)</label>
+          <input type="text" id="exam_prep" name="exam_prep" placeholder="e.g., JKSSB, NEET, UPSC, University Exams" />
+        </div>
+
+        <div class="form-group">
+          <label for="shift">Select Membership Plan *</label>
+          <select id="shift" name="shift" required>
+            <option value="Day Shift - Rs. 1100/month">Day Shift — ₹1,100 / month</option>
+            <option value="Day + Night (24x7) - Rs. 1500/month">Day + Night (24×7) — ₹1,500 / month</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="joining_date">Preferred Joining Date</label>
+          <input type="date" id="joining_date" name="joining_date" />
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+    </div>
+
+    <footer>
+      <p><strong>Rehmaniya Library Pulwama</strong> • Prichoo Sumo Stand, Pulwama</p>
+      <p>Phone: <a href="tel:+916006476218">+91 60064 76218</a> • Email: <a href="mailto:asiff4268@gmail.com">asiff4268@gmail.com</a></p>
+    </footer>
+  </div>
 
 </body>
 </html>
