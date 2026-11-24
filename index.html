@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rehmaniya Library Pulwama | 24×7 Self-Study Space</title>
+  <title>Rehmaniya Library, Pulwama | 24×7 Self-Study & Night-Stay Facility</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --card: #263348;
+      --bg: #080d17;
+      --surface: #111927;
+      --surface-light: #182336;
       --text: #f8fafc;
       --muted: #94a3b8;
-      --accent: #38bdf8;
-      --green: #22c55e;
-      --border: #334155;
+      --gold: #f59e0b;
+      --gold-light: #fcd34d;
+      --emerald: #10b981;
+      --sky: #38bdf8;
+      --rose: #f43f5e;
+      --border: rgba(245, 158, 11, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
     }
 
     * {
@@ -23,102 +27,533 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.08), transparent 40%);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 680px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 1.5rem 1.15rem 3rem;
+      padding: 1.5rem 1.15rem 3.5rem;
     }
 
-    /* Header Banner */
+    /* Hero & Founder Welcome Card */
     .hero {
-      background: linear-gradient(145deg, #1e293b, #0f172a);
+      background: linear-gradient(160deg, #162033 0%, #0d1422 100%);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem 1.35rem;
+      border-radius: 20px;
+      padding: 2rem 1.4rem;
       text-align: center;
       margin-bottom: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .badges-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .badge-247 {
-      display: inline-block;
-      background: rgba(34, 197, 94, 0.16);
-      color: var(--green);
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      font-size: 0.8rem;
+      background: rgba(16, 185, 129, 0.16);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      font-size: 0.76rem;
       font-weight: 700;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.5px;
+      padding: 0.28rem 0.85rem;
+      border-radius: 999px;
+      letter-spacing: 0.6px;
+    }
+
+    .badge-admissions {
+      background: rgba(245, 158, 11, 0.18);
+      color: var(--gold-light);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.28rem 0.85rem;
+      border-radius: 999px;
+      letter-spacing: 0.6px;
+    }
+
+    .owner-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .owner-avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.16), 0 10px 25px rgba(0, 0, 0, 0.5);
+      background-color: var(--surface-light);
+    }
+
+    .owner-label {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold-light);
     }
 
     .hero h1 {
-      font-size: 1.75rem;
-      line-height: 1.25;
-      margin-bottom: 0.4rem;
+      font-size: 1.95rem;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      background: linear-gradient(90deg, #ffffff, #fde68a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      color: var(--gold);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
     }
 
     .location {
       color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
     }
 
-    /* Quick Action Buttons */
+    .motivation-box {
+      background: rgba(255, 255, 255, 0.035);
+      border-left: 3px solid var(--gold);
+      border-right: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      margin: 0 auto 1.4rem;
+      max-width: 600px;
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+
+    .motivation-box span {
+      display: block;
+      margin-top: 0.45rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
     .quick-actions {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
     .action-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.65rem 0.5rem;
-      border-radius: 8px;
-      font-weight: 600;
+      padding: 0.78rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 700;
       font-size: 0.88rem;
       text-decoration: none;
+      text-align: center;
       transition: transform 0.15s;
     }
 
-    .action-btn:active {
-      transform: scale(0.97);
+    .action-btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-call {
-      background: var(--accent);
-      color: #0f172a;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #080d17;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
     }
 
     .btn-whatsapp {
-      background: var(--green);
-      color: #052e16;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     }
 
     .btn-map {
-      background: var(--card);
+      background: var(--surface-light);
       color: var(--text);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
     }
 
-    /* Section Headings */
+    /* Cabin Availability & Interactive Picker */
+    .cabin-tracker {
+      background: linear-gradient(160deg, #131d2e, #0d1522);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.35rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .tracker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tracker-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .live-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      display: inline-block;
+    }
+
+    .tracker-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-box {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.85rem 0.5rem;
+      text-align: center;
+    }
+
+    .stat-box.available {
+      border-color: rgba(16, 185, 129, 0.45);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.12), var(--surface));
+    }
+
+    .stat-number {
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .stat-total .stat-number { color: var(--gold-light); }
+    .stat-booked .stat-number { color: #fb7185; }
+    .stat-box.available .stat-number { color: #34d399; }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      font-weight: 600;
+    }
+
+    .progress-wrap {
+      margin-bottom: 0.85rem;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    .progress-caption {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+
+    .map-toggle-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--gold-light);
+      padding: 0.62rem;
+      border-radius: 9px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cabin-map-panel {
+      display: block;
+      margin-top: 0.95rem;
+      padding-top: 0.95rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .cabin-map-panel.collapsed {
+      display: none;
+    }
+
+    .map-legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .legend-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+    }
+
+    .dot-free {
+      background: rgba(16, 185, 129, 0.25);
+      border: 1px solid #34d399;
+    }
+
+    .dot-selected {
+      background: rgba(245, 158, 11, 0.45);
+      border: 1px solid #fcd34d;
+    }
+
+    .dot-booked {
+      background: rgba(244, 63, 94, 0.22);
+      border: 1px solid #fb7185;
+    }
+
+    .cabin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+      gap: 5px;
+    }
+
+    .cabin-cell {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 0.35rem 0;
+      border-radius: 5px;
+      user-select: none;
+      transition: transform 0.1s;
+    }
+
+    .cabin-cell.free {
+      background: rgba(16, 185, 129, 0.16);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      cursor: pointer;
+    }
+
+    .cabin-cell.free:hover {
+      transform: scale(1.06);
+      background: rgba(16, 185, 129, 0.3);
+    }
+
+    .cabin-cell.selected {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #080d17;
+      border: 1px solid #fef08a;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.55);
+      cursor: pointer;
+    }
+
+    .cabin-cell.booked {
+      background: rgba(244, 63, 94, 0.14);
+      color: #fda4af;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    /* Tiffin & Night Study Highlight Banner */
+    .highlight-banner {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(16, 185, 129, 0.12));
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 14px;
+      padding: 1.15rem 1.25rem;
+      margin-bottom: 1.75rem;
+      text-align: center;
+    }
+
+    .highlight-banner h3 {
+      color: var(--gold-light);
+      font-size: 1.12rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .highlight-banner p {
+      color: #e2e8f0;
+      font-size: 0.88rem;
+    }
+
     h2 {
       font-size: 1.25rem;
-      margin: 1.75rem 0 0.9rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.65rem;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #ffffff;
     }
 
-    /* Facilities Grid */
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 22px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, var(--gold), var(--emerald));
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background: var(--surface);
+      cursor: pointer;
+      aspect-ratio: 16 / 11;
+    }
+
+    .gallery-item.featured {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+      border-color: var(--border);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(8, 13, 23, 0.88));
+      color: #f8fafc;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 1.2rem 0.75rem 0.55rem;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 15, 0.92);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 85vh;
+      border-radius: 12px;
+      border: 2px solid var(--gold);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.4rem;
+      background: var(--gold);
+      color: #080d17;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Study Spaces & Facilities */
+    .spaces-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .space-card {
+      background: linear-gradient(180deg, var(--surface-light), var(--surface));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 0.85rem;
+      text-align: center;
+    }
+
+    .space-card strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 0.96rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .space-card span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
     .facilities {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -127,21 +562,21 @@
 
     .facility-card {
       background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.95rem 1rem;
     }
 
     .facility-card strong {
       display: block;
-      color: var(--accent);
-      font-size: 0.98rem;
+      color: var(--sky);
+      font-size: 0.95rem;
       margin-bottom: 0.2rem;
     }
 
     .facility-card span {
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.83rem;
     }
 
     /* Fee Plans */
@@ -153,15 +588,15 @@
 
     .plan-card {
       background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.15rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.25rem;
       text-align: center;
     }
 
     .plan-card.popular {
-      border-color: var(--accent);
-      background: linear-gradient(180deg, rgba(56, 189, 248, 0.12), var(--surface));
+      border: 1px solid var(--gold);
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.14), var(--surface));
     }
 
     .plan-title {
@@ -170,9 +605,14 @@
       margin-bottom: 0.35rem;
     }
 
+    .plan-card.popular .plan-title {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
     .plan-price {
-      font-size: 1.65rem;
-      font-weight: 700;
+      font-size: 1.75rem;
+      font-weight: 800;
       color: var(--text);
     }
 
@@ -186,75 +626,85 @@
     .form-box {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.35rem;
+      border-radius: 16px;
+      padding: 1.45rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .selected-cabin-banner {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 10px;
+      padding: 0.7rem 0.9rem;
+      margin-bottom: 1rem;
+      font-size: 0.86rem;
+      color: var(--gold-light);
     }
 
     .form-group {
-      margin-bottom: 0.95rem;
+      margin-bottom: 1rem;
     }
 
     .form-group label {
       display: block;
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 0.3rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 0.35rem;
     }
 
     .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .form-group select {
       width: 100%;
       background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9px;
+      padding: 0.75rem 0.85rem;
       color: var(--text);
       font-family: inherit;
       font-size: 0.95rem;
     }
 
     .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+    .form-group select:focus {
       outline: none;
-      border-color: var(--accent);
+      border-color: var(--gold);
     }
 
     .submit-btn {
       width: 100%;
-      background: var(--accent);
-      color: #0f172a;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #080d17;
       border: none;
-      border-radius: 8px;
-      padding: 0.85rem;
+      border-radius: 10px;
+      padding: 0.92rem;
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
-      margin-top: 0.35rem;
-    }
-
-    .submit-btn:hover {
-      background: #7dd3fc;
+      margin-top: 0.4rem;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
     }
 
     footer {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 2.25rem;
       color: var(--muted);
       font-size: 0.85rem;
+      line-height: 1.7;
     }
 
     footer a {
-      color: var(--accent);
+      color: var(--gold-light);
       text-decoration: none;
     }
 
+    @media (max-width: 540px) {
+      .spaces-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.featured { grid-column: span 1; aspect-ratio: 16 / 11; }
+    }
+
     @media (max-width: 440px) {
-      .facilities,
-      .plans {
-        grid-template-columns: 1fr;
-      }
+      .facilities, .plans { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -263,35 +713,163 @@
   <div class="container">
     <!-- Hero Header -->
     <div class="hero">
-      <div class="badge-247">OPEN 24 × 7</div>
-      <h1>Rehmaniya Library Pulwama</h1>
+      <div class="badges-row">
+        <span class="badge-247">OPEN 24 × 7</span>
+        <span class="badge-admissions">ADMISSIONS OPEN</span>
+      </div>
+
+      <div class="owner-wrapper">
+        <img src="Photos/owner.jpeg" alt="Founder - Rehmaniya Library Pulwama" class="owner-avatar" />
+        <span class="owner-label">Founder's Desk</span>
+      </div>
+
+      <h1>Rehmaniya Library, Pulwama</h1>
+      <div class="tagline">Study • Focus • Prepare • Succeed</div>
       <p class="location">Prichoo Sumo Stand, Pulwama, Jammu & Kashmir</p>
 
+      <div class="motivation-box">
+        “Every late-night revision, every quiet hour of discipline, and every page you turn today builds the future you dream of tomorrow. We created Rehmaniya Library to give Pulwama's aspirants a peaceful, distraction-free home where hard work meets comfort.”
+        <span>— Your Comfort, Your Preparation, Our Responsibility!</span>
+      </div>
+
       <div class="quick-actions">
-        <a href="tel:+916006476218" class="action-btn btn-call">Call Now</a>
-        <a href="https://wa.me/916006476218?text=Hello%2C%20I%20scanned%20the%20QR%20code%20and%20want%20to%20enquire%20about%20seat%20availability%20at%20Rehmaniya%20Library%20Pulwama." target="_blank" rel="noopener noreferrer" class="action-btn btn-whatsapp">WhatsApp</a>
+        <a href="tel:+918899708112" class="action-btn btn-call">Call Now</a>
+        <a href="https://chat.whatsapp.com/D63UJEjkbxYJUzgGh2CiNX" target="_blank" rel="noopener noreferrer" class="action-btn btn-whatsapp">Join WhatsApp</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Prichoo+Sumo+Stand+Pulwama" target="_blank" rel="noopener noreferrer" class="action-btn btn-map">Directions</a>
       </div>
     </div>
 
+    <!-- Cabin Availability & Interactive Picker -->
+    <div class="cabin-tracker">
+      <div class="tracker-header">
+        <div class="tracker-title">
+          <span class="live-dot"></span>
+          <span>Cabin Availability</span>
+        </div>
+        <span class="tracker-badge" id="seats-badge">51 Cabins Available</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box stat-total">
+          <div class="stat-number" id="total-cabins">111</div>
+          <div class="stat-label">Total Cabins</div>
+        </div>
+        <div class="stat-box stat-booked">
+          <div class="stat-number" id="booked-cabins">60</div>
+          <div class="stat-label">Booked</div>
+        </div>
+        <div class="stat-box available">
+          <div class="stat-number" id="free-cabins">51</div>
+          <div class="stat-label">Available Free</div>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="occupancy-bar" style="width: 54%;"></div>
+        </div>
+        <div class="progress-caption">
+          <span id="occupancy-text">54% Occupied</span>
+          <span>Tap any green cabin to select it</span>
+        </div>
+      </div>
+
+      <button type="button" class="map-toggle-btn" id="toggle-map-btn" onclick="toggleCabinMap()">
+        Hide Cabins Layout ▴
+      </button>
+
+      <div class="cabin-map-panel" id="cabin-map-panel">
+        <div class="map-legend">
+          <div class="legend-item"><span class="legend-dot dot-free"></span> Free (Tap to Pick)</div>
+          <div class="legend-item"><span class="legend-dot dot-selected"></span> Your Choice</div>
+          <div class="legend-item"><span class="legend-dot dot-booked"></span> Booked</div>
+        </div>
+        <div class="cabin-grid" id="cabin-grid"></div>
+      </div>
+    </div>
+
+    <!-- Tiffin & Night Study Highlight -->
+    <div class="highlight-banner">
+      <h3>Tiffin Service Available for Students</h3>
+      <p>Fresh • Hygienic • Nutritious • On Time — Best Facilities for Night Study</p>
+    </div>
+
+    <!-- Gallery -->
+    <h2>Inside Rehmaniya Library</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item featured" onclick="openLightbox('Photos/pic1.png')">
+        <img src="Photos/pic1.png" alt="Rehmaniya Library Study Hall View" loading="lazy" />
+        <div class="gallery-caption">Dedicated Quiet Study Hall & Desks</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('Photos/pic2.png')">
+        <img src="Photos/pic2.png" alt="Individual Study Cabins" loading="lazy" />
+        <div class="gallery-caption">Individual Study Cabins</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('Photos/pic3.png')">
+        <img src="Photos/pic3.png" alt="Night-Stay Rooms" loading="lazy" />
+        <div class="gallery-caption">Comfortable Night-Stay Rooms</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('Photos/pic4.png')">
+        <img src="Photos/pic4.png" alt="Library Environment & Lighting" loading="lazy" />
+        <div class="gallery-caption">Peaceful Night Study Ambiance</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('Photos/pic5.png')">
+        <img src="Photos/pic5.png" alt="Student Amenities & Lockers" loading="lazy" />
+        <div class="gallery-caption">Modern Facilities & Lockers</div>
+      </div>
+    </div>
+
+    <!-- Study Spaces -->
+    <h2>Study & Night-Stay Spaces</h2>
+    <div class="spaces-grid">
+      <div class="space-card">
+        <strong>Dedicated Study Hall</strong>
+        <span>Comfortable & peaceful environment for serious preparation</span>
+      </div>
+      <div class="space-card">
+        <strong>111 Study Cabins</strong>
+        <span>Individual distraction-free desks with personal lighting</span>
+      </div>
+      <div class="space-card">
+        <strong>Night-Stay Rooms</strong>
+        <span>Dedicated rest & overnight stay rooms for 24×7 aspirants</span>
+      </div>
+    </div>
+
     <!-- Facilities -->
-    <h2>Library Facilities</h2>
+    <h2>Our Facilities</h2>
     <div class="facilities">
       <div class="facility-card">
-        <strong>24×7 Open Access</strong>
-        <span>Study anytime—day or late night without interruption.</span>
+        <strong>AC Facility (24×7)</strong>
+        <span>4 air conditioners keeping the study hall cool and comfortable</span>
       </div>
       <div class="facility-card">
-        <strong>24×7 High-Speed Wi-Fi</strong>
-        <span>Reliable internet for online lectures, mock tests, and research.</span>
+        <strong>High-Speed Wi-Fi (24×7)</strong>
+        <span>Uninterrupted internet for online classes and mock tests</span>
       </div>
       <div class="facility-card">
-        <strong>4 Air Conditioners (24×7)</strong>
-        <span>Climate-controlled, quiet, and comfortable study hall.</span>
+        <strong>Geyser & Hot Water</strong>
+        <span>Hot water facility available round the clock</span>
       </div>
       <div class="facility-card">
-        <strong>Prime Location</strong>
-        <span>Easily accessible right at Prichoo Sumo Stand, Pulwama.</span>
+        <strong>RO Drinking Water</strong>
+        <span>Clean, purified drinking water for all students</span>
+      </div>
+      <div class="facility-card">
+        <strong>Personal Lockers</strong>
+        <span>Safe storage lockers for your books and study material</span>
+      </div>
+      <div class="facility-card">
+        <strong>Separate Washrooms</strong>
+        <span>Clean, dedicated washrooms for Boys & Girls</span>
+      </div>
+      <div class="facility-card">
+        <strong>Prayer Facility</strong>
+        <span>Quiet, dedicated space available for daily prayers</span>
+      </div>
+      <div class="facility-card">
+        <strong>24×7 CCTV Surveillance</strong>
+        <span>Complete round-the-clock security and monitoring</span>
       </div>
     </div>
 
@@ -309,12 +887,22 @@
     </div>
 
     <!-- Student Registration Form -->
-    <h2>Student Registration Form</h2>
+    <h2 id="register-section">Student Registration Form</h2>
     <div class="form-box">
-      <!-- Replace YOUR_ACCESS_KEY_HERE with your Web3Forms key linked to asiff4268@gmail.com -->
+      <div class="selected-cabin-banner">
+        Selected Cabin: <strong id="selected-cabin-display">None selected (Tap any green cabin above or choose below)</strong>
+      </div>
+
       <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="4cc6ed38-2add-4302-96b5-7b6fd2553702" />
+        <input type="hidden" name="access_key" value="cea4329e-63b0-4bef-9dda-e0c7515a0f4e" />
         <input type="hidden" name="subject" value="New Student Registration - Rehmaniya Library Pulwama" />
+
+        <div class="form-group">
+          <label for="selected_cabin">Choose Free Cabin Number *</label>
+          <select id="selected_cabin" name="selected_cabin" required onchange="onDropdownCabinChange()">
+            <option value="">-- Select an Available Cabin --</option>
+          </select>
+        </div>
 
         <div class="form-group">
           <label for="student_name">Full Name *</label>
@@ -345,19 +933,186 @@
         </div>
 
         <div class="form-group">
+          <label for="tiffin">Interested in Student Tiffin Service?</label>
+          <select id="tiffin" name="tiffin">
+            <option value="No">No, only library seat</option>
+            <option value="Yes">Yes, please share tiffin details</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <label for="joining_date">Preferred Joining Date</label>
           <input type="date" id="joining_date" name="joining_date" />
         </div>
 
-        <button type="submit" class="submit-btn">Submit Registration</button>
+        <button type="submit" class="submit-btn">Request Selected Cabin & Submit</button>
       </form>
     </div>
 
     <footer>
-      <p><strong>Rehmaniya Library Pulwama</strong> • Prichoo Sumo Stand, Pulwama</p>
-      <p>Phone: <a href="tel:+916006476218">+91 60064 76218</a> • Email: <a href="mailto:asiff4268@gmail.com">asiff4268@gmail.com</a></p>
+      <p><strong>Rehmaniya Library, Pulwama</strong> • Your Comfort, Your Preparation, Our Responsibility!</p>
+      <p>Prichoo Sumo Stand, Pulwama • Phone: <a href="tel:+918899708112">+91 88997 08112</a> • Email: <a href="mailto:wanimosin20@gmail.com">wanimosin20@gmail.com</a></p>
     </footer>
   </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img id="lightbox-img" src="" alt="Library Preview" />
+  </div>
+
+  <script>
+    const TOTAL_CABINS = 111;
+    let BOOKED_CABIN_NUMBERS = [
+      1, 2, 4, 5, 7, 8, 10, 12, 13, 14, 15,
+      16, 18, 19, 21, 22, 24, 25, 27, 29, 30,
+      32, 33, 35, 36, 38, 40, 41, 43, 45, 46,
+      48, 50, 51, 53, 55, 57, 58, 60, 62, 64,
+      66, 68, 70, 72, 74, 76, 78, 80, 82, 85,
+      88, 90, 92, 95, 98, 100, 103, 106, 109, 111
+    ];
+
+    let selectedCabin = null;
+    const isAdminMode = new URLSearchParams(window.location.search).get('admin') === '1';
+
+    function renderCabinUI() {
+      BOOKED_CABIN_NUMBERS = [...new Set(BOOKED_CABIN_NUMBERS)]
+        .filter(n => n >= 1 && n <= TOTAL_CABINS)
+        .sort((a, b) => a - b);
+
+      const bookedSet = new Set(BOOKED_CABIN_NUMBERS);
+      const bookedCount = BOOKED_CABIN_NUMBERS.length;
+      const freeCabins = Math.max(0, TOTAL_CABINS - bookedCount);
+      const percent = Math.min(100, Math.round((bookedCount / TOTAL_CABINS) * 100));
+
+      document.getElementById('total-cabins').textContent = TOTAL_CABINS;
+      document.getElementById('booked-cabins').textContent = bookedCount;
+      document.getElementById('free-cabins').textContent = freeCabins;
+      document.getElementById('occupancy-bar').style.width = percent + '%';
+      document.getElementById('occupancy-text').textContent = percent + '% Occupied';
+
+      const badge = document.getElementById('seats-badge');
+      badge.textContent = freeCabins === 0
+        ? 'Waitlist Only'
+        : (freeCabins <= 15 ? `Only ${freeCabins} Cabins Left!` : `${freeCabins} Cabins Available`);
+
+      const grid = document.getElementById('cabin-grid');
+      grid.innerHTML = '';
+
+      const dropdown = document.getElementById('selected_cabin');
+      dropdown.innerHTML = '<option value="">-- Select an Available Cabin --</option>';
+
+      for (let i = 1; i <= TOTAL_CABINS; i++) {
+        const isBooked = bookedSet.has(i);
+        const cell = document.createElement('div');
+
+        if (isBooked) {
+          cell.className = 'cabin-cell booked';
+          cell.title = `Cabin #${i} (Booked)`;
+        } else {
+          cell.className = 'cabin-cell ' + (selectedCabin === i ? 'selected' : 'free');
+          cell.title = `Cabin #${i} (Available — Tap to pick)`;
+
+          const opt = document.createElement('option');
+          opt.value = `Cabin #${i}`;
+          opt.textContent = `Cabin #${i} (Available)`;
+          if (selectedCabin === i) opt.selected = true;
+          dropdown.appendChild(opt);
+        }
+
+        cell.textContent = i;
+
+        cell.onclick = () => {
+          if (isAdminMode) {
+            toggleAdminCabin(i);
+          } else if (!isBooked) {
+            selectStudentCabin(i);
+          }
+        };
+
+        grid.appendChild(cell);
+      }
+
+      document.getElementById('selected-cabin-display').textContent = selectedCabin
+        ? `Cabin #${selectedCabin}`
+        : 'None selected (Tap any green cabin above or choose below)';
+
+      renderAdminHelper();
+    }
+
+    function selectStudentCabin(cabinNum) {
+      selectedCabin = (selectedCabin === cabinNum) ? null : cabinNum;
+      renderCabinUI();
+      if (selectedCabin) {
+        document.getElementById('register-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function onDropdownCabinChange() {
+      const val = document.getElementById('selected_cabin').value;
+      selectedCabin = val ? parseInt(val.replace('Cabin #', ''), 10) : null;
+      renderCabinUI();
+    }
+
+    function toggleAdminCabin(num) {
+      if (BOOKED_CABIN_NUMBERS.includes(num)) {
+        BOOKED_CABIN_NUMBERS = BOOKED_CABIN_NUMBERS.filter(n => n !== num);
+      } else {
+        BOOKED_CABIN_NUMBERS.push(num);
+      }
+      renderCabinUI();
+    }
+
+    function renderAdminHelper() {
+      let box = document.getElementById('admin-helper-box');
+      if (!isAdminMode) {
+        if (box) box.remove();
+        return;
+      }
+      if (!box) {
+        box = document.createElement('div');
+        box.id = 'admin-helper-box';
+        box.style.cssText = 'margin-top: 1rem; padding: 0.9rem; background: #080d17; border: 1px dashed #f59e0b; border-radius: 10px; text-align: center;';
+        document.getElementById('cabin-map-panel').appendChild(box);
+      }
+      const codeLine = 'let BOOKED_CABIN_NUMBERS = [' + BOOKED_CABIN_NUMBERS.join(', ') + '];';
+      box.innerHTML = `
+        <div style="font-size: 0.82rem; color: #fcd34d; font-weight: 700; margin-bottom: 0.4rem;">
+          Owner Seat Editor — Tap any cabin above to toggle Free / Booked
+        </div>
+        <textarea id="seat-code-output" readonly style="width: 100%; height: 64px; background: #111927; color: #34d399; border: 1px solid #334155; border-radius: 6px; padding: 0.5rem; font-size: 0.78rem; font-family: monospace;">${codeLine}</textarea>
+        <button type="button" onclick="copySeatCode()" style="margin-top: 0.5rem; background: #f59e0b; color: #080d17; border: none; padding: 0.45rem 1rem; border-radius: 6px; font-weight: 700; font-size: 0.82rem; cursor: pointer;">
+          Copy Updated Seat Line
+        </button>
+      `;
+    }
+
+    function copySeatCode() {
+      const box = document.getElementById('seat-code-output');
+      box.select();
+      navigator.clipboard.writeText(box.value);
+      alert('Copied! Paste this line into index.html on GitHub and click Commit changes.');
+    }
+
+    function toggleCabinMap() {
+      const panel = document.getElementById('cabin-map-panel');
+      const btn = document.getElementById('toggle-map-btn');
+      panel.classList.toggle('collapsed');
+      btn.innerHTML = panel.classList.contains('collapsed')
+        ? 'View All 111 Cabins Layout ▾'
+        : 'Hide Cabins Layout ▴';
+    }
+
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    renderCabinUI();
+  </script>
 
 </body>
 </html>
